@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -ex
+
 # upload files
 for file in $ARTIFACT_DIR/*.deb; do 
 	curl ${CURL_OPTS} -X POST -F file=@${file} ${APTLY_API_BASE}/files/${CI_COMMIT_SHA}
