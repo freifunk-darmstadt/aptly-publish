@@ -1,4 +1,4 @@
-FROM alpine/httpie:latest
+FROM clue/httpie:latest
 
 ENV PREFIX debian
 ENV CURL_OPTS ''
