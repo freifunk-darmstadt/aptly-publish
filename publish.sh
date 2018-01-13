@@ -2,6 +2,9 @@
 
 set -ex
 
+
+http -a ${APTLY_USER}:${APTLY_PASSWORD} ${APTLY_API_BASE}/repos
+
 # upload files
 echo "Uploading files"
 for file in $ARTIFACT_DIR/*.deb; do 
