@@ -1,7 +1,6 @@
-FROM appropriate/curl:latest
+FROM alpine/httpie:latest
 
 ENV PREFIX debian
-ENV DISTRIBUTION stretch
 ENV CURL_OPTS ''
 ENV APTLY_API_BASE 'https://apt.ffda.io/api'
 
