@@ -6,7 +6,7 @@ set -ex
 echo "Uploading files"
 for file in $ARTIFACT_DIR/*.deb; do 
 	#curl ${CURL_OPTS} -u$APTLY_USER:$APTLY_PASSWORD -X POST -F file=@${file} ${APTLY_API_BASE}/files/${CI_COMMIT_SHA}
-	http -a ${APTLY_USER}:${APTLY_PASSWORD} -f POST ${APTLY_API_BASE}/files/${CI_COMMIT_SHA} file=@${file}
+	http -a ${APTLY_USER}:${APTLY_PASSWORD} -f POST ${APTLY_API_BASE}/files/${CI_COMMIT_SHA} file@${file}
 done
 
 # add files to repository
