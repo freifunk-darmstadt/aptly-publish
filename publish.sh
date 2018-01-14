@@ -18,4 +18,4 @@ curl ${CURL_OPTS} -u$APTLY_USER:$APTLY_PASSWORD -X POST -H "Content-Type: applic
 
 # update published snapshot
 echo "Updating published snapshot"
-curl ${CURL_OPTS} -u$APTLY_USER:$APTLY_PASSWORD -X PUT -H "Content-Type: application/json" --data "{\"Snapshots\": [{\"Component\":\"main\", \"Name\": \"${REPOSITORY}/${CI_COMMIT_SHA}\"}]}" ${APTLY_API_BASE}/publish/:debian/${REPOSITORY}/:${DISTRIBUTION}
+curl ${CURL_OPTS} -u$APTLY_USER:$APTLY_PASSWORD -X PUT -H "Content-Type: application/json" --data "{\"Snapshots\": [{\"Component\":\"main\", \"Name\": \"${REPOSITORY}/${CI_COMMIT_SHA}\"}]}" ${APTLY_API_BASE}/publish/debian%2F${REPOSITORY}/${DISTRIBUTION}
